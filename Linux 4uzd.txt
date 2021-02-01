@@ -1,0 +1,13 @@
+#!/bin/bash
+mkdir fold1 fold2
+cd fold1
+touch 1file.bar 2file.bar
+cd ..
+cd fold2
+cp ../fold1/*.bar .
+cd ..
+cd fold1
+rm *
+mv ../fold2/*. bar .
+cd ..
+rmdir fold2
